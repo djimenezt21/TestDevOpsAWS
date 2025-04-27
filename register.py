@@ -45,10 +45,10 @@ def handler(event, context):
         # Item optimizado para DynamoDB
         item = {
             'id': str(uuid.uuid4()),
-            'n': body['name'][:100],  # Campo abreviado
-            'e': body['email'][:100], # Campo abreviado
-            'ts': int(time.time()),   # Timestamp numérico
-            'dt': datetime.utcnow().strftime('%Y-%m-%d')  # Fecha para posibles queries
+            'name': body['name'][:100],  # Campo abreviado
+            'email': body['email'][:100], # Campo abreviado
+            'timestamp': int(time.time()),   # Timestamp numérico
+            'datetime': datetime.utcnow().strftime('%Y-%m-%d')  # Fecha para posibles queries
         }
         
         # Campos opcionales con nombres cortos
