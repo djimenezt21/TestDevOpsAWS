@@ -3,6 +3,7 @@ resource "aws_iam_policy" "policy" {
   path        = "/"
   description = "policy for dynamodb and logging"
 
+
   # Terraform's "jsonencode" function converts a
   # Terraform expression result to valid JSON syntax.
   policy = jsonencode(
